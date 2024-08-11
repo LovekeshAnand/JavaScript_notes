@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM chai aur code</title>
+</head>
+<body style="background-color: rgb(46, 46, 46); color: #ffff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);//this will print the elements of parent class
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);//this will print the inne HTML of each children
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild); //this will print the first element of the parent class
+    // console.log(parent.lastElementChild); //this will print the last element of the parent class
+
+
+    const dayOne =document.querySelector('.day')
+    // console.log(dayOne)
+    // console.log(dayOne.parentElement) // this will print the parent element of the child
+    console.log(dayOne.nextElementSibling) // this will print the next element from the first child of the parent class
+
+    console.log("NODES: ", parent.childNodes); //this will print all the child nodes in a parent
+    // in childNodes 'enter' is also counted as text
+    
+</script>
+</html>

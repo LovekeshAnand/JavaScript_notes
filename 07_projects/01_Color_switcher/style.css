@@ -1,0 +1,28 @@
+* {
+    font-family: system-ui, sans-serif;
+    padding: 12px;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid white 2px;
+    display: inline-block;
+  }
+  
+  #grey {
+    background: grey;
+  }
+  
+  #purple {
+    background: purple;
+  }
+  
+  #blue {
+    background: blue;
+  }
+  
+  #green {
+    background: green;
+  }
+  

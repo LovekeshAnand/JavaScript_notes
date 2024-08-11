@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- Document Object Model basically describes the structure of the documents like HTML.
+DOM manipulation is used to make changes in DOM. -->
+
+<!-- Elements and Attributes -->
+<!-- document.getElementById('title') this is used to find the element by the id name entered-->  
+
+<!-- document.getElementById('title').className this is used to find the class name of the element throught the id name -->
+
+<!-- document.getElementById('title').getAttribute(id) this will get the id of the of the name mentioned it is applicable for className also-->
+
+<!-- document.getElementById('title').setAttribute('class', 'test heading') this will change the class name to test heading -->
+
+<!-- Style -->
+
+<!-- const title = document.getElementById('title')
+title.style.backgroundColor = 'green' this will manipulate the HTML file and change the color of the div to green -->
+
+<!-- title.style.padding = "15px"
+title.style.borderRadius = "15px"
+title.style.backgroundColor = "green" -->
+
+<!-- Text -->
+
+<!-- title.textContent -this will return all the text that is visible or not visible due to some CSS properties -->
+<!-- title.innerHTML this will return even the HTML return inside the element the text-->
+<!-- title.innerText -this will only return the text that is visible -->
+
+<!-- querySelector -->
+
+<!-- document.querySelector('h2') this will return the first h2 of the page -->
+<!-- document.querySelector('#title') this will return the element which contains the id name 'title' -->
+<!-- document.querySelector('.heading') this will return the element which contains the class name 'heading' -->
+<!-- document.querySelector('input[type="password"]') this will return the input
+element of the document -->
+
+<!-- document.querySelector('ul') 
+const myul = document.querySelector('ul')
+myul.querySelector('li')
+const turngreen = myul.querySelector('li')
+turngreen.style.backgroundColor = "green" -->
+<!-- the above program is used to change the background color of the first element in the unordered list  -->
+<!-- turngreen.innertext this will return the text of the first element of the unorderlist as we named it turngreen above  -->
+<!-- turngreen.innertext = "five" this will change the inner text of the first element of the unordered list -->
+
+<!-- querySelectorAll -->
+
+<!-- const tempLiList = document.querySelectorAll('li')
+tempLiList.style.color = "green" this will throw an error
+tempLiList[0].style.color = "green" this will change the color of the first element of the list -->
+
+<!-- .querySelectorAll always return a nodelist which always have indexing like a map, if we want to access an element from the nodelist we to write index as we write for an array -->
+
+<!-- const myh1 = document.querySelectorAll('h1') this will return all the h1 elements of the document
+myh1.style.color = 'green' this will throw an error, reasom stated below
+myh1[0].style.color = 'green' we always have to specify the index number even if we only get a single element in a nodelist, as it is in the form of map -->
+
+<!-- foreach -->
+
+<!-- const tempLi = document.querySelectorAll('li')
+tempLi.forEach(function (li) {
+    li.style.color = "green"
+}) this program will change color of the elements of the list one by one using foreach -->
+
+<!-- document.getElementByClassName('list-item') this will return an html collection of the elements which have class name 'list-item' and in this case we have this class name given to list elements.
+const tempClassLi = document.getElementByClassName('list-item')
+Array.from(tempClassLi) this will convert the node list into an array so that we can use loop functions on the elements
+const myConvertedArray = Array.from(tempClassLi)
+myCovertedArray.forEach(function(li){
+    li.style.color = "orange"
+}) after converting the nodelist into array we have used forEach loop to change the color of the elements -->

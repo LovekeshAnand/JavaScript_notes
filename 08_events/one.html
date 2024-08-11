@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li> <!-- we can write properties like onclick here only but it's a bad practice -->
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function (){
+    //     alert('owl clicked')
+    // }//there is no problem in this but it gives lesser features compared to next approach
+
+    // document.getElementById('images').addEventListener('click', function(e){//here e is known as event object. An event object refers to the argument sent into an event handler function. Used names are e, event, or even evt, following the fact that the parameter represents an event. It's almost always good to stick to conventions.
+    //     console.log("clicked inside the list")
+    // }, false)// we added false at the end because false here means default
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked again")
+    //     e.stopPropagation()//.stopPropagate will stop bubbling and limit the action to the event it is applied  on.
+    // }, false)// we added false at the end because false here means default
+    // this is the best approach to use events 
+    //false is used for bubbling, bubbling means the code will execute from bottom to top
+    //true is used for capturing, capturing means the code will execute from top to bottom
+
+    //top to bottom and bottom to top, simply means that if there is parent element and we had eventListner on it and inside the parent there is a child and we also added a eventListner on that. if we use the false which is bubbling and use the child element first, the child element will activate than parent element. And capturing is opposite of it, in capturing if we click on child element, first the parent element will activate than the child element. This depends on the usecase.
+    //HTML → BODY → FORM → DIV -> P (capturing phase, the first listener):
+    //P → DIV → FORM → BODY → HTML (bubbling phase, the second listener).
+    //In the above example of owl and list if we use bubbling and click on owl, first the event which is applied on owl will propagate or run and then event which is applied on list
+    //Similarly if we use capturing and click on owl, first the event applied on list will propagate or run and then the event applied on owl
+
+    // document.getElementById('google').addEventListener("click", function(e){
+    //     e.preventDefault()// this will prevent the default event to trigger
+    //     e.stopPropagation()// this will stop the bubbling or capturing
+    //     console.log("Google clicked")
+    // }, false)
+
+    // type, timestamp, preventDefault
+    // target, to Element, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    // I have to study above topics
+
+    document.querySelector('#images').addEventListener('click' ,function(e){
+        if (e.target.tagName === 'IMG') {//here we will only select images, because without the if condition if will click on list item it will completly remove the parent node which is ul.
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }//here only if we click on image the image will be removed
+    })
+</script>
+</html>
