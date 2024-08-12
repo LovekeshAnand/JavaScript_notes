@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur js</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+//    setInterval(function(){
+//     console.log("Lovekesh Anand");
+//    }, 1000)//Here we have set time of 1 second.
+   //setInterval will execute the function in inside it after every one second interval. 
+
+   //Another way using setInterval by taking a reference of a already defined function
+   const sayDate = function(str){
+    console.log(str, Date.now());
+   }//this function will print hi with time in milliseconds till now as Date.now() function is used.
+
+   //Stopping an executin using clearInterval()
+   const stopExecution = setInterval(sayDate, 1000, "hi") //here we can pass a third arguement.
+   clearInterval(stopExecution)
+
+   //Starting and stopping the execution of setInterval and clearInterval using start and stop button
+   const sayTime = function(){
+        console.log("Lovekesh", Date.now())
+    }
+    let start;
+   document.querySelector('#start').addEventListener('click', function(){
+    start = setInterval(sayTime, 1000)
+   })
+   document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(start)
+   })
+</script>
+</html>

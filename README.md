@@ -11,7 +11,10 @@ Welcome to my JavaScript Notes repository! This repo is a collection of detailed
 6. **DOM Manipulation**
 7. **Projects**
 8. **Events with PDF Notes**
-
+   **async**
+          **setTimeoout() and clearTimeout**
+          **setInterval() and clearInterval**
+          
 ## Getting Started
 To explore the notes, simply browse the folders and open the `.md` files. Each section contains explanations, code snippets, and examples to help you understand JavaScript concepts.
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Lovekesh anand")
+    }, 2000)//2000 millisecond is 2 second
+    //here we have set a time which means the task to be performed inside the function will execute after 2 second.
+
+    //another way of using setTimeout by giving reference of the function. Reference or the function we define in setTimeout is known as handler.
+    const sayLovekesh = function(){
+        console.log("Lovekesh");
+    }
+    setTimeout(sayLovekesh, 2000)//here the function will execute after 2 seconds
+
+    //changing the text of the document 
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+    const stopexecution = setTimeout(changeText, 2000)
+
+    //stopping a timeout before execution using clearTimeout
+    // clearTimeout(stopexecution)
+
+    //stopping an event using clearTimeout
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(stopexecution)
+        console.log("STOPPED");
+        
+    })
+</script>
+</html>
