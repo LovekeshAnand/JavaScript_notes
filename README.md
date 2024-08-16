@@ -14,7 +14,10 @@ Welcome to my JavaScript Notes repository! This repo is a collection of detailed
    **async**<br>
           **setTimeoout() and clearTimeout**<br>
           **setInterval() and clearInterval**<br>
-
+9. **Advance**<br>
+          **APi request using xhr**<br>
+          **Promises**<br>
+          
 ## Getting Started
 To explore the notes, simply browse the folders and open the `.md` files. Each section contains explanations, code snippets, and examples to help you understand JavaScript concepts.
 
