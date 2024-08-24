@@ -5,7 +5,7 @@
 //PRIMITIVE DATATYPES
 // range of number datatype is 2 to the power of 53
 // bigInt to use for the big numbers
-// string used withg double quotes ""
+// string used with double quotes ""
 // boolean it only has two values which are true and false
 // null is a standalone value 
 // undefined means the value is not assigned to the variable 
