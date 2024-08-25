@@ -17,6 +17,9 @@ Welcome to my JavaScript Notes repository! This repo is a collection of detailed
 9. **Advance**<br>
           **APi request using xhr**<br>
           **Promises**<br>
+          **XML, XHR and API pdf notes**<br>
+10. **Classes and Object oriented programming**<br>
+          **Object oriented programming basics**<br>
           
 ## Getting Started
 To explore the notes, simply browse the folders and open the `.md` files. Each section contains explanations, code snippets, and examples to help you understand JavaScript concepts.
