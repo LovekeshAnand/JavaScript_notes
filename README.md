@@ -11,15 +11,15 @@ Welcome to my JavaScript Notes repository! This repo is a collection of detailed
 6. **DOM Manipulation**
 7. **Projects**
 8. **Events with PDF Notes**<br>
-   &nbsp; &nbsp;**async**<br>
-   **setTimeoout() and clearTimeout**<br>
-   **setInterval() and clearInterval**<br>
+   &nbsp; &nbsp; &nbsp;**async**<br>
+   &nbsp; &nbsp; &nbsp;**setTimeoout() and clearTimeout**<br>
+   &nbsp; &nbsp; &nbsp;**setInterval() and clearInterval**<br>
 9. **Advance**<br>
-   **APi request using xhr**<br>
-   **Promises**<br>
-   **XML, XHR and API pdf notes**<br>
+   &nbsp; &nbsp; &nbsp;**APi request using xhr**<br>
+   &nbsp; &nbsp; &nbsp;**Promises**<br>
+   &nbsp; &nbsp; &nbsp;**XML, XHR and API pdf notes**<br>
 10. **Classes and Object oriented programming**<br>
-   **Object oriented programming basics**<br>
+   &nbsp; &nbsp; &nbsp;**Object oriented programming basics**<br>
           
 ## Getting Started
 To explore the notes, simply browse the folders and open the `.md` files. Each section contains explanations, code snippets, and examples to help you understand JavaScript concepts.
