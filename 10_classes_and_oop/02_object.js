@@ -3,7 +3,6 @@
 //Basically everything in JavaScript is Object.
 //The properties inherited by object are also inherited by array, strings, etc.
 
-
 //Function is basically function datatype but behind the scenes it is object.
 function multipleBy5(num){
     return num*5
