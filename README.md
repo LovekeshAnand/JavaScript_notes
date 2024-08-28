@@ -20,6 +20,12 @@ Welcome to my JavaScript Notes repository! This repo is a collection of detailed
    &nbsp; &nbsp; &nbsp;**XML, XHR and API pdf notes**<br>
 10. **Classes and Object oriented programming**<br>
    &nbsp; &nbsp; &nbsp;**Object oriented programming basics**<br>
+   &nbsp; &nbsp; &nbsp;**Prototype basics and "new" keyword**<br>
+   &nbsp; &nbsp; &nbsp;**Prototype**<br>
+   &nbsp; &nbsp; &nbsp;**"call" keyword**<br>
+   &nbsp; &nbsp; &nbsp;**Classes**<br>
+   &nbsp; &nbsp; &nbsp;**Inheritance**<br>
+   &nbsp; &nbsp; &nbsp;**Static property**<br>
           
 ## Getting Started
 To explore the notes, simply browse the folders and open the `.md` files. Each section contains explanations, code snippets, and examples to help you understand JavaScript concepts.
