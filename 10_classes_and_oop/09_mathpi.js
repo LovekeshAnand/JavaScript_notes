@@ -26,6 +26,7 @@ Object.defineProperty(User, 'name',{
 //but when we defined the properties like writable and enumerable to false, no we cannot overwrite the object.
 console.log(Object.getOwnPropertyDescriptor(User, "name"));
 
+//iterating an object
 for (let [key, value] of Object.entries(User)) {
     if (typeof value !== 'function') {
         
