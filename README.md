@@ -26,6 +26,13 @@ Welcome to my JavaScript Notes repository! This repo is a collection of detailed
    &nbsp; &nbsp; &nbsp;**Classes**<br>
    &nbsp; &nbsp; &nbsp;**Inheritance**<br>
    &nbsp; &nbsp; &nbsp;**Static property**<br>
+   &nbsp; &nbsp; &nbsp;**Bind keyword**<br>
+   &nbsp; &nbsp; &nbsp;**.getOwnPropertyDescriptor**<br>
+   &nbsp; &nbsp; &nbsp;**Getters and Setters**<br>
+   &nbsp; &nbsp; &nbsp;**Properties of Getters and Setters**<br>
+   &nbsp; &nbsp; &nbsp;**Using Getters and Setters on objects**<br>
+11. **Fun with JS**<br>
+   &nbsp; &nbsp; &nbsp;**Lexical scope and Closure**<br>
           
 ## Getting Started
 To explore the notes, simply browse the folders and open the `.md` files. Each section contains explanations, code snippets, and examples to help you understand JavaScript concepts.
