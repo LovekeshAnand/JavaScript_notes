@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure practice</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function init() {
+    //     let name = "Mozilla"; 
+    //         function displayName() {
+    //             console.log(name); 
+    //         }
+    //         displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "lovekesh"
+    //     console.log("OUTER", secret);//this show that outer function also don't have the access to it's inner function due to lexical scoping
+        
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("INNER",username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("INNERTWO",username);
+    //         console.log(secret);//inner two don't have the access to the secret variable due the lexical scoping
+    //     }
+    //     inner();
+    //     innerTwo();
+    // }
+    // outer()
+//these example basically describes that the variable decalred inside a function cannot be accessed outside the function due to lexical scoping.
+//if we decalre a function inside the function in which we decalred the variable, than we are able to access the variable that we decalred inside that function.
+    //till this we have learned about lexical scope.
+    //now from here closure will start
+
+    //A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;//by returning displayname we are directly sharing the lexical scope to the outer function, therefore outer function can have the access to the lexical scope of the inner function. While executing the whole lexical scope of both the function will go inside the execution context.
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+</script>
+<!-- practical implementation of closure. -->
+<script>
+    // document.getElementById("orange").addEventListener("click", function(){
+    //     document.body.style.backgroundColor = "Orange";
+    // })
+    // document.getElementById("green").addEventListener("click", function(){
+    //     document.body.style.backgroundColor = "Green";
+    // })
+
+    //making a function to change the color of the background by using color.
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+
+        return function(){
+             document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById("orange").addEventListener("click", clickHandler("orange"))
+    document.getElementById("green").addEventListener("click", clickHandler("green"))
+</script>
+
+</html>
